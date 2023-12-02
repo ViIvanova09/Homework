@@ -10,19 +10,19 @@ Person.prototype.greet=function(){
 }
 /* --------------------------- Manager constructor -------------------------- */
 function Manager(name, age, managed){
-   __proto__ = new Person(name, age);
+   Person.call(this, name, age);
    this.managed = managed;
     }
 // // Manager objects should inherit all methods from Person:
-
+Object.assign(Manager.prototype, Person.prototype)
 
 // /* -------------------------- Developer constructor ------------------------- */
 function Developer(name, age, skillset){
-   __proto__ = new Person(name, age);
+   Person.call(this, name, age);
    this.skillset = skillset;
   }
 // Developer objects should inherit all methods from Person:
-
+Object.assign(Developer.prototype, Person.prototype)
 /* ----------------------------- Create Objects ----------------------------- */
 // Developer instances
    let maria = new Developer('Maria Popova', 23, ['Python', 'Machine Learning']);
