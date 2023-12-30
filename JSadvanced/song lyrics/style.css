@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist-card {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.artist-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.lyrics-container {
+    display: none;
+    margin-top: 10px;
+}
